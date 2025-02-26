@@ -1,5 +1,6 @@
 import "./App.css";
-import foto from "./img/gatoBlack.jpg";
+import fotoBlack from "./img/gatoBlack.jpg";
+import fotoWhite from "./img/GatoWhite.jpg"
 
 import Perfil from "./components/perfil/perfil";
 import Switch from "./components/switch/Switch";
@@ -15,11 +16,13 @@ const App = () => {
     setIsLight(!isLight);
   };
   return (
-    <div id="App" className={isLight && "light"}>
-      <Perfil fotoPerfil={foto}> @Jujusac</Perfil>
+    <div id="App" className={isLight ? "light" : ""}>
+      <Perfil fotoPerfil={isLight ? fotoWhite : fotoBlack}> @Jujusac</Perfil>
 
       <Switch troca={troca} isLight={isLight} />
 
+<div id="container">
+  <div id="links">
       <ul>
         <Links link={"https://github.com/JulianaFulanetto"}>GitHub</Links>
         <Links link={"https://www.instagram.com/jujuumf_/?hl=pt"}>
@@ -32,7 +35,8 @@ const App = () => {
           Spotify
         </Links>
       </ul>
-
+      </div>
+      </div>
       <div id="socialLinks">
         <SocialLinks
           link={"https://github.com/JulianaFulanetto"}
