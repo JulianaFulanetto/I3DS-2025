@@ -1,4 +1,4 @@
-import styles from "react";
+import styles from './Footer.module.css';
 
 const Footer = (props) => {
   return (
@@ -11,4 +11,4 @@ const Footer = (props) => {
   );
 };
 
-export default Footer;
+export default Footer
