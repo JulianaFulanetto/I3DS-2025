@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import Footer from "./components/footer/Footer";
 import MovieCards from "./components/movieCard/MovieCards";
+import Lupa from "./assets/search.svg"
+import Logo from "./assets/devflix.png"
 // import Logo from ""
 
 const App = () => {
@@ -36,7 +38,7 @@ const handleKeyPress = (e) => {
 
   return (
     <div id="app">
-      <img className="logo" src={"https://placehold.co/200x200"} alt="" />
+      <img className="Logo" src={Logo} alt="" />
 
       <div className="search">
         <input 
@@ -44,9 +46,10 @@ const handleKeyPress = (e) => {
         onChange={(e)=>setSearch(e.target.value)}
         type="text" 
         placeholder="Pesquise por filmes" />
+        
         <img 
         onClick={() => searchMovies(search)}
-        src={"https://placehold.co/20x20"} alt="" />
+        src={Lupa} alt="" />
       </div>
 
       {movies?.length > 0 ? (
