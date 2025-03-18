@@ -55,7 +55,7 @@ const handleKeyPress = (e) => {
       {movies?.length > 0 ? (
         <div className="container"> 
       {movies.map((movie,index)=>(
-        <MovieCards key={index} {...movie}/>
+        <MovieCards key={index} apiUrl={apiUrl} {...movie}/>
       ))}
         </div>
       ) : (
