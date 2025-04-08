@@ -15,6 +15,7 @@ const App = () => {
   const troca = () => {
     setIsLight(!isLight);
   };
+  
   return (
     <div id="App" className={isLight ? "light" : ""}>
       <Perfil fotoPerfil={isLight ? fotoWhite : fotoBlack}> @Jujusac</Perfil>
