@@ -1,47 +1,47 @@
 /* Tema geral */
 .light {
-    background-color: #999ca0; /* Fundo claro */
-    color: #000; /* Texto escuro */
-  }
-  
-  .dark {
-    background-color: #212529; /* Fundo escuro */
-    color: #fff; /* Texto claro */
-  }
-  
-  /* Botão */
-  button {
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    opacity: 0.8;
-  }
+  background-color: #999ca0; /* Fundo claro */
+  color: #000; /* Texto escuro */
+}
+
+.dark {
+  background-color: #212529; /* Fundo escuro */
+  color: #fff; /* Texto claro */
+}
+
+/* Botão */
+button {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.8;
+}
 * {
-    font-family: "Dancing Script", cursive;
-    font-optical-sizing: auto;
-    font-weight: weight;
-    font-style: normal;
-  }
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
 
 #chat-container {
-    width: 489px;
-    height: 650px;
-    background-image: url("/src/assets/Pagina.png"); /* Certifique-se de que o caminho está correto */
-    background-size: cover; /* Faz a imagem cobrir todo o espaço */
-    background-position: center; /* Centraliza a imagem */
-    border-radius: 20px; /* Adiciona bordas arredondadas, se necessário */
-    overflow: hidden; /* Garante que o conteúdo não ultrapasse as bordas */
-  }
+  width: 489px;
+  height: 650px;
+  background-image: url("/src/assets/Pagina.png"); /* Certifique-se de que o caminho está correto */
+  background-size: cover; /* Faz a imagem cobrir todo o espaço */
+  background-position: center; /* Centraliza a imagem */
+  border-radius: 20px; /* Adiciona bordas arredondadas, se necessário */
+  overflow: hidden; /* Garante que o conteúdo não ultrapasse as bordas */
+}
 
 #join-box {
-    width: 500px;
-    height: 400px;
-    background-image: url("/src/assets/Inicio.png"); /* Certifique-se de que o caminho está correto */
-    background-size: cover; /* Faz a imagem cobrir todo o espaço */
-    background-position: center; /* Centraliza a imagem */
-    overflow: hidden; /* Garante que o conteúdo não ultrapasse as bordas */
+  width: 500px;
+  height: 400px;
+  background-image: url("/src/assets/Inicio.png"); /* Certifique-se de que o caminho está correto */
+  background-size: cover; /* Faz a imagem cobrir todo o espaço */
+  background-position: center; /* Centraliza a imagem */
+  overflow: hidden; /* Garante que o conteúdo não ultrapasse as bordas */
 }

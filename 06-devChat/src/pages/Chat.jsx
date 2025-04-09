@@ -1,7 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
 
-
-
 const Chat = (props) => {
   //Fake messeges data
   const [messageList, setMessageList] = useState([]);
@@ -23,7 +21,7 @@ const Chat = (props) => {
   const handleSubmit = () => {
     if (
       messageList.map(
-        (message) => message.author == "underfined" && window.location.reload()
+        (message) => message.author == "undefined" && window.location.reload()
       )
     );
 
@@ -37,10 +35,7 @@ const Chat = (props) => {
   };
 
   return (
-    <div
-      id="chat-container"
-      className="rounded-4 p-5 d-flex flex-column"
-    >
+    <div id="chat-container" className="rounded-4 p-5 d-flex flex-column">
       <div
         id="chat-body"
         className="d-flex flex-column gap-3 overflow-y-hidden h-100"
