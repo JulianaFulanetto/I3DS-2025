@@ -21,18 +21,18 @@ const Join = (props) => {
 
   return (
     <div className="text-center">
-      <h1>devChat</h1>
+      <h1></h1>
 
       <div
         id="join-box"
-        className="mt-4 bg-secondary rounded-4 py-4 px-5  d-flex flex-column justify-content-center align-items-center gap-3"
+        className="text-dark mt-4 rounded-4 py-4 px-5  d-flex flex-column justify-content-center align-items-center gap-3"
       >
         <h3>Bem-vindo ao devChat!</h3>
         <div className="form-floating mb-3">
           <input
             ref={usernameRef}
             type="text"
-            className="form-control"
+            className="form-control "
             id="floatingInput"
             placeholder="Nome de usuário"
             onKeyDown={(e) => e.key == "Enter" && handleSubmit()}

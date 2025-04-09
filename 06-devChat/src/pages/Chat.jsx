@@ -1,5 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 
+
+
 const Chat = (props) => {
   //Fake messeges data
   const [messageList, setMessageList] = useState([]);
@@ -37,8 +39,7 @@ const Chat = (props) => {
   return (
     <div
       id="chat-container"
-      style={{ width: "400px", height: "600px" }}
-      className="bg-secondary rounded-4 p-3 d-flex flex-column"
+      className="rounded-4 p-5 d-flex flex-column"
     >
       <div
         id="chat-body"
@@ -67,11 +68,11 @@ const Chat = (props) => {
           ref={messageRef}
           id="msgUser"
           type="text"
-          className="form-control"
+          className="form-control bg-body-secondary"
           placeholder="Digite sua mensagem..."
         />
         <button
-          className="btn btn-light m-0 input-group-text"
+          className="btn btn-secondary m-0 input-group-text"
           id="basic-addon1"
           onClick={() => handleSubmit()}
         >
