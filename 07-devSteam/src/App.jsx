@@ -1,21 +1,54 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import Header from "./components/Header";
 import Promotion from "./components/Promotion";
+import CarrinhoOffCanvas from "./components/CarrinhoOffCanvas";
 
 function App() {
-  // contador de produtos no carrinho
-  const [contador,setContador] = useState(0); 
+  const [carrinhoItem, setCarrinhoItem] = useState([]);
 
-  //adiciona mais 1 item no carrinho (exemplo: ao adicionar um botão e puxar esta const, adicionará um item ao carrinho)
-  const handleAddCarrinho = () => {
-    setContador(contador + 1); // atualiza o contador
-  }
+  useEffect(() => {
+    localStorage.setItem("devcarrinho", JSON.stringify(carrinhoItem));
+  }, [carrinhoItem]);
+
+  useEffect(() => {
+    const salvaCarrinho = localStorage.getItem("devcarrinho");
+    salvaCarrinho && setCarrinhoItem(JSON.parse(salvaCarrinho));
+  }, []);
+
+  // console.log(localStorage.getItem("devcarrinho"));
+
+  const handleAddCarrinho = (produto) => {
+    setCarrinhoItem((itemAnterior) => {
+      const existe = itemAnterior.find((item) => item.id === produto.id);
+      if (existe) {
+        return itemAnterior.map((item) =>
+          item.id === produto.id
+            ? { ...item, quantidade: item.quantidade + 1 }
+            : item
+        );
+      } else {
+        return [...itemAnterior, { ...produto, quantidade: 1 }];
+      }
+    });
+  };
+
+  const handleRemoveCarrinho = (produto) => {
+    setCarrinhoItem((itemAnterior) =>
+      itemAnterior.filter((item) => item.id !== produto.id)
+    );
+  };
 
   return (
     <>
-      <Header contadorJogos={contador} />  {/* variavel interna do header  */}
-      <Promotion onAddCarrinho={handleAddCarrinho}/> {/* adicionando o click para a promoção */}
+      <Header contadorJogos={carrinhoItem.length} />
+      <Promotion
+        onAddCarrinho={handleAddCarrinho} //adicionando o click para promoção
+      />
+      <CarrinhoOffCanvas
+        onRemoveCarrinho={handleRemoveCarrinho}
+        carrinhoItem={carrinhoItem}
+      />
     </>
   );
 }
